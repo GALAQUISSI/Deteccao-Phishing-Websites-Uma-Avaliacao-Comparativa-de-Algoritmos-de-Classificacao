@@ -44,12 +44,11 @@ Matriz de Confusão
 - https://medium.com/@bashiralam185/top-20-classification-algorithms-in-machine-learning-e40d9dda2461
 
 ## Integrantes
-Daniel Vilano Soares
-Gustavo Henrique Venâncio Meirelles de Souza
-Lucas Gabriel de Carvalho Silva Oliveira
-Instituição
+- Daniel Vilano Soares
+- Gustavo Henrique Venâncio Meirelles de Souza
+- Lucas Gabriel de Carvalho Silva Oliveira
 
-Universidade Federal de Uberlândia (UFU)
+#### Universidade Federal de Uberlândia (UFU)
 
 Bacharelado em Sistemas de Informação
 
