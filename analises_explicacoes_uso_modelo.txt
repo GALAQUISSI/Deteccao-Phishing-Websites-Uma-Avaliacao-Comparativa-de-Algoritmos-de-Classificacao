@@ -1,0 +1,22 @@
+O LightGBM é um algoritmo baseado em Gradient Boosting Decision Trees (GBDT), ou seja, é um conjunto de árvores de decisão que trabalham sequencialmente para construir um modelo preditivo.
+
+Diferentemente de uma única árvore de decisão, que realiza previsões com base nos padrões identificados nos dados, o LightGBM utiliza várias árvores, nas quais cada uma busca corrigir progressivamente os erros cometidos pelas árvores anteriores. Esse processo é baseado na técnica de Gradient Boosting.
+
+O Gradient Boosting combina diversos modelos mais simples em um único modelo mais robusto e preciso. Isso acontece por meio de um processo de reforço (Boosting), no qual cada nova árvore é treinada para reduzir os erros das previsões anteriores.
+
+Esse erro é medido por meio da função de perda (Loss Function), que representa a diferença entre as previsões do modelo e os valores reais.
+
+Na prática, a primeira árvore identifica padrões iniciais nos dados e realiza as primeiras previsões. Em seguida, o algoritmo identifica os erros cometidos e utiliza essas informações para orientar a construção da próxima árvore, que busca corrigir parte desses erros. Esse processo se repete sequencialmente, fazendo com que cada nova árvore contribua para melhorar o desempenho do modelo.
+
+Essa correção é orientada pelo gradiente, que representa a derivada da função de perda em relação às previsões do modelo. Em termos intuitivos, ele indica a direção e a intensidade dos ajustes necessários nas previsões para reduzir o erro.
+
+Assim, o Gradient Boosting constrói um modelo de forma progressiva, combinando várias árvores de decisão, em que cada uma contribui para reduzir os erros do conjunto e melhorar sua capacidade preditiva.
+
+
+------------------------------
+
+A escolha do LightGBM se deu, inicialmente, pela sua velocidade de processamento e eficiência no uso da memória, características proporcionadas pela sua estrutura de armazenamento e pela forma como realiza o treinamento, tornando-o uma alternativa bastante eficiente em comparação a outros algoritmos de Gradient Boosting.
+
+Além disso, como o dataset de phishing possui diversas variáveis com poucos valores únicos, principalmente binárias e ternárias, o algoritmo consegue explorar essas características de maneira eficiente na definição dos splits (divisões das árvores).
+
+Como o LightGBM constrói diversas árvores sequencialmente, foi necessário ter cuidado com os parâmetros max_depth e num_leaves, que controlam a complexidade das árvores. O ajuste desses parâmetros foi importante para evitar que o modelo se tornasse excessivamente complexo e apresentasse overfitting
